@@ -1,5 +1,9 @@
 # README #
 
+# Distributed Graph Mining on a Massive "Single" Graph #
+
+We propose a novel distributed algorithm for mining frequent subgraphs from a single, very large, labeled network. Our approach is the first distributed method to mine a massive input graph that is too large to fit in the memory of any individual compute node. The input graph thus has to be partitioned among the nodes, which can lead to potential false negatives. Furthermore, for scalable performance it is crucial to minimize the communication among the compute nodes. Our algorithm, DistGraph, ensures that there are no false negatives, and uses a set of optimizations and efficient collective communication operations to minimize information exchange. To our knowledge DistGraph is the first approach demonstrated to scale to graphs with over a billion vertices and edges. Scalability results on up to 2048 IBM Blue Gene/Q compute nodes, with 16 cores each, show very good speedup.
+
 * This contains implementations of parallel frequent graph mining algorithms for a single input graph. It includes sequential, parallel and distributed algorithms (with partitioned input graph) 
 * The details of the algorithms be found in the disseration [Parallel Subgraph Mining on Hybrid Platforms: HPC Systems, Multi-cores and GPUs](http://www.cs.rpi.edu/~zaki/PaperDir/PhdTheses/talukder-thesis.pdf)
 * Contact: Nilothpal Talukder, Email: <nilothpal.talukder@gmail.com>, Mohammed J. Zaki, Email: <zaki@cs.rpi.edu>
